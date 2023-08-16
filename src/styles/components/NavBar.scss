@@ -1,0 +1,47 @@
+.navbar{
+    background-color: $bgc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logoH{
+    width: 64px;
+}
+
+.menu{
+    height: 14px;
+    padding-top: 20px;
+}
+
+@media (min-width: 750px) {
+
+    .logoH{ width: 128px;
+
+
+    }
+
+
+.menu{
+    height: 28px;
+    
+}}
+
+
+@media (min-width: 1000px) 
+{
+    .logoH{ width: 256px;
+
+
+    }
+
+
+.menu{
+    padding-top: 80px;
+    height: 56px;
+    
+}
+
+
+
+    }

@@ -1,0 +1,289 @@
+%arrows {
+    
+    
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    background: none;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+
+    
+
+    &.control-arrow {
+        &:before {
+            margin: 0 5px;
+            display: inline-block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            content: '';
+        }
+    }
+
+    &.control-disabled {
+       
+        cursor: inherit;
+        display: none;
+    }
+
+    &.control-prev {
+        left: 0;
+        &:before {
+            border-right: 8px solid #fff;
+        }
+    }
+
+    &.control-next {
+        right: 0;
+        &:before {
+            border-left: 8px solid #fff;
+        }
+    }
+}
+
+.carousel-root {
+    outline: none;
+    background-color: $bgc;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+background-color: $bgc;
+    // only applying box sizing inside the plugin so it won't break any style
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        display: inline-block;
+        pointer-events: none;
+    }
+
+    .carousel {
+        position: relative;
+    }
+
+    .control-arrow {
+        @extend %arrows;
+        outline: 0;
+        border: 0;
+        background: none;
+        top: 50%;
+        margin-top: -13px;
+        font-size: 18px;
+    }
+
+    .thumbs-wrapper {
+        margin: 20px 20px 0 20px;
+        overflow: hidden;
+    }
+
+    .thumbs {
+       
+        
+        position: relative;
+        list-style: none;
+        white-space: nowrap;
+    }
+
+    .thumb {
+       
+        display: inline-block;
+        margin-right: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        border: 3px solid #fff;
+        padding: 2px;
+
+        &:focus {
+            border: 3px solid #ccc;
+            outline: none;
+        }
+
+        &.selected,
+        &:hover {
+            border: 3px solid $txt-color;
+        }
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    &.carousel-slider {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+
+        // adjusting the arrows for the slider
+        .control-arrow {
+            @extend %arrows;
+            top: 0;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            margin-top: 0;
+            padding: 5px;
+
+            &:hover {
+                background: rgba(#000, 0.2);
+            }
+        }
+    }
+
+    .slider-wrapper {
+        overflow: hidden;
+        margin: auto;
+        width: 100%;
+      
+
+        &.axis-horizontal {
+            .slider {
+                -ms-box-orient: horizontal;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -moz-flex;
+                display: -webkit-flex;
+                display: flex;
+
+                .slide {
+                    flex-direction: column;
+                    flex-flow: column;
+                }
+            }
+        }
+
+        &.axis-vertical {
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+
+            .slider {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .slider {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        list-style: none;
+        width: 100%;
+
+        
+    }
+
+    .slide {
+        min-width: 100%;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        // padding-bottom: 32px;
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            border: 0;
+        }
+
+        iframe {
+            display: inline-block;
+            width:20%;
+            margin: 0 40px 40px;
+            border: 0;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            margin-left: -45%;
+            width: 90%;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            font-size: 12px;
+            text-align: center;
+            
+            
+        }
+    }
+
+    .control-dots {
+        position: absolute;
+        bottom: 0;
+        margin: 10px 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+        
+
+        .dot {
+           
+            box-shadow: 1px 1px 2px rgba(#000, 0.9);
+            background: #fff;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 8px;
+
+            
+        }
+    }
+
+    .carousel-status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        font-size: 10px;
+        text-shadow: 1px 1px 1px rgba(#000, 0.9);
+        color: #fff;
+    }
+
+    &:hover {
+        .slide .legend {
+            opacity: 1;
+        }
+    }
+}
+
+
+@media (min-width: 750px) {
+
+    
+
+    .carousel .slide .legend{
+    font-size: 24px;
+ }
+
+
+}
+
+@media (min-width: 1000px) {
+
+    
+
+    .carousel .slide .legend{
+       font-size: 48px;
+    }
+   
+   
+   }

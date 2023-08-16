@@ -1,0 +1,184 @@
+.containerA{
+    background-color: $bgc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 40px;
+    width: auto;
+}
+
+.top{
+    display: flex;
+    
+}
+
+.rectangleJ{
+    width: 108px;
+    height:140px ;
+    position:relative;
+    bottom: -30px;
+    right: 20px;
+}
+
+.moi{
+    width: 107px;
+    height: 146px;
+    position: absolute;
+    border-color: $txt-color;
+    border: 1px solid #FFFBFB;
+    border-style: dashed;
+    
+    
+    
+}
+
+
+.saut{
+    margin-top: 30px;
+    
+}
+
+.propos,.résumé,.couleur{
+    color: $txt-color;
+}
+
+.propos{
+   padding-top: 30px;
+font-family: Montserrat;
+font-size: 12px;
+font-weight: 700;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
+color: $txt-color;
+text-decoration-color: $mustard;
+text-decoration-line: underline;
+text-decoration-style: solid ;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px;
+text-underline-position: right;
+width: 100%;
+}
+
+.résumé{
+    font-family: Montserrat;
+font-size: 11px;
+font-weight: 700;
+line-height: 13px;
+letter-spacing: 0em;
+
+
+}
+
+.couleur{
+    background-color: $mustard;
+    border: none;
+}
+
+.nb{
+    color: $mustard;
+    background-color: transparent;
+    border: $mustard 1px solid ;
+    
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+}
+
+@media (min-width: 750px) {
+    
+    .containerA{
+        
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        
+    }
+
+    .rectangleJ{
+        width: 216px;
+        height:280px ;
+       
+    }
+
+    .moi{
+        width:214px;
+        height: 292px;
+       
+        
+        
+        
+    }
+    
+    .propos{
+      
+     font-size: 24px;
+     
+     }
+
+     .résumé{
+    font-size: 22px;
+    line-height: 26px;
+    
+    
+    
+    }
+
+
+    .couleur,.nb{
+
+        font-size: 22px;
+    }
+
+
+    }
+
+    @media (min-width: 1000px){
+       
+        .containerA{
+         padding-top: 70px;
+            justify-content: center;
+        }
+
+        .rectangleJ{
+            width: 432px;
+            height: 560px; 
+           right: 45px;
+           top: -50px;
+        }
+    
+        .moi{
+            width:428px;
+            height: 596px;
+            
+           
+            
+            
+            
+        }
+        
+        .propos{
+          
+         font-size: 48px;
+         
+         }
+    
+         .résumé{
+        font-size: 44px;
+        line-height: 52px;
+        
+        
+        
+        }
+    
+    
+        .couleur,.nb{
+    
+            font-size: 44px;
+        }
+    
+    }

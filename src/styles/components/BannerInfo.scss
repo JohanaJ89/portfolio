@@ -1,0 +1,106 @@
+.containerB{
+    background-color: $bgc;
+}
+
+.hello{
+    padding-top: 10px;
+    margin-block-start: 0;
+    color: $txt-color;
+    font-family: $police1;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.identity{
+color: $turquoise;
+font-family: $police2;
+font-size: 20px;
+font-weight: 400;
+}
+
+.job{
+    color: $txt-color;
+    font-family: $police1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.about{
+   background-color: $txt-color;
+    
+}
+
+.contact{
+    background-color: $bgc;
+    border-color: $txt-color;
+    color: $txt-color;
+}
+
+.boutons,.hello,.identity,.job{
+    padding-left: 20px;
+}
+
+
+@media (min-width: 750px){
+
+.hello{
+   
+    font-size: 22px;
+}
+.identity{
+    font-size: 40px;
+}
+
+.job{
+   
+    font-size: 24px;
+   
+}
+
+.about{
+    font-size: 22px;
+}
+
+.contact{
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+}
+
+@media (min-width: 1000px){
+
+    .hello{
+       
+        font-size: 44px;
+    }
+    .identity{
+        font-size: 80px;
+    }
+    
+    .job{
+       
+        font-size: 48px;
+       
+    }
+    
+    .about{
+        font-size: 44px;
+    }
+    
+    .contact{
+        font-size: 44px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    }

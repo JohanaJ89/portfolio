@@ -1,0 +1,58 @@
+.footer{
+    background-color: $bgc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoF{
+    width: 91px;
+}
+
+.git{
+    padding-right: 30px;
+}
+
+.linked{
+    padding-left: 30px;
+}
+
+.git,.linked{
+    
+        width: 26px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+    }
+.social{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 750px) {
+
+    .logoF{
+        width: 182px;
+    }
+
+    .git,.linked{
+    
+        width: 52px;
+        
+    }
+
+}
+
+@media (min-width: 1000px){
+    
+    .logoF{
+        width: 364px;
+    }
+
+    .git,.linked{
+    
+        width: 104px;
+        
+    }
+
+
+    }
